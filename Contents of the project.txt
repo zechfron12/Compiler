@@ -17,3 +17,10 @@ Features;
 	c. Multiplication
 	d. Division
 	e. Power
+
+TODO : 
+introduce string, bool, array, types;
+Symbol table;
+Symbol table for functuins;
+Error messages;
+AST;
