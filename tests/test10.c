@@ -1,5 +1,4 @@
-#include <stdio.h>
 int main()
 {
-	int 9abi = 10;
+ int 9abi = 10;
 }

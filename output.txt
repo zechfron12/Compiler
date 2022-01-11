@@ -1,31 +1,378 @@
+Running: 18
+
+
+===================================  Running TestCase   ===================================
 Status: Parsing Complete - Valid
                               SYMBOL TABLE
                                ------------
     SYMBOL |           CLASS |       TYPE |      VALUE |    LINE NO |         NESTING | PARAMS COUNT |
 ----------------------------------------------------------------------------------------------------
-         a | Array Identifier |        int |            |         14 |           99999 |         -1 |
-         b |      Identifier |        int |            |          3 |           99999 |         -1 |
-         i |      Identifier |        int |         10 |         11 |           99999 |         -1 |
-         n |      Identifier |        int |            |         11 |           99999 |         -1 |
-         x |      Identifier |        int |            |          5 |           99999 |         -1 |
-         x |      Identifier |        int |          3 |         13 |           99999 |         -1 |
-         x |      Identifier |        int |         10 |         19 |           99999 |         -1 |
-       for |         Keyword |            |            |         15 |            9999 |         -1 |
-      char |         Keyword |            |            |         12 |            9999 |         -1 |
-        ch |      Identifier |       char |            |         12 |           99999 |         -1 |
-    return |         Keyword |            |            |          6 |            9999 |         -1 |
-        if |         Keyword |            |            |         17 |            9999 |         -1 |
+         a | Array Identifier |        int |            |         15 |           99999 |         -1 |
+         b |      Identifier |       char |            |          3 |           99999 |         -1 |
+         b | Array Identifier |       char |            |          0 |            9999 |         -1 |
+         b |      Identifier |       char |            |         16 |           99999 |         -1 |
+         i |      Identifier |        int |         10 |         12 |           99999 |         -1 |
+         i |      Identifier |            |            |          0 |            9999 |         -1 |
+         i |      Identifier |            |            |          0 |            9999 |         -1 |
+         i |      Identifier |            |            |          0 |            9999 |         -1 |
+         i |      Identifier |            |            |          0 |            9999 |         -1 |
+         n |      Identifier |        int |            |         12 |           99999 |         -1 |
+         x |      Identifier |        int |            |          6 |           99999 |         -1 |
+         y |      Identifier |        int |            |          5 |           99999 |         -1 |
+         x |      Identifier |        int |            |          0 |            9999 |         -1 |
+         y | Array Identifier |        int |            |          0 |            9999 |         -1 |
+         y |      Identifier |        int |            |         12 |           99999 |         -1 |
+         x |      Identifier |        int |            |          0 |            9999 |         -1 |
+         x |      Identifier |        int |          3 |         14 |           99999 |         -1 |
+         x |      Identifier |        int |            |          0 |            9999 |         -1 |
+         x |      Identifier |        int |         10 |         21 |           99999 |         -1 |
+         x |      Identifier |            |            |          0 |            9999 |         -1 |
+         x |      Identifier |            |            |          0 |            9999 |         -1 |
+         x |      Identifier |            |            |          0 |            9999 |         -1 |
+       for |         Keyword |            |            |         17 |            9999 |         -1 |
+      char |         Keyword |            |            |         13 |            9999 |         -1 |
+      char |         Keyword |            |            |          0 |            9999 |         -1 |
+        ch |      Identifier |       char |            |         13 |           99999 |         -1 |
+    return |         Keyword |            |            |          7 |            9999 |         -1 |
+        if |         Keyword |            |            |         19 |            9999 |         -1 |
        int |         Keyword |            |            |          3 |            9999 |         -1 |
-      main |        Function |       void |            |          9 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+      main |        Function |       void |            |         10 |            9999 |         -1 |
     myfunc |        Function |        int |            |          3 |            9999 |          1 |
-     while |         Keyword |            |            |         20 |            9999 |         -1 |
-      void |         Keyword |            |            |          9 |            9999 |         -1 |
+     while |         Keyword |            |            |         22 |            9999 |         -1 |
+      void |         Keyword |            |            |         10 |            9999 |         -1 |
 
 
                               CONSTANT TABLE
                                --------------
       NAME |            TYPE
 ---------------------------------------------------------------------------------
+       199 | Number Constant
         10 | Number Constant
+        20 | Number Constant
          0 | Number Constant
          3 | Number Constant
+
+
+===================================  Running TestCase   ===================================
+Status: Parsing Complete - Valid
+                              SYMBOL TABLE
+                               ------------
+    SYMBOL |           CLASS |       TYPE |      VALUE |    LINE NO |         NESTING | PARAMS COUNT |
+----------------------------------------------------------------------------------------------------
+         a |      Identifier |        int |            |          6 |           99999 |         -1 |
+         b |      Identifier |        int |            |          6 |           99999 |         -1 |
+         c |      Identifier |        int |            |          6 |           99999 |         -1 |
+         d |      Identifier |        int |            |          6 |           99999 |         -1 |
+         e |      Identifier |        int |            |          6 |           99999 |         -1 |
+         f |      Identifier |        int |            |          6 |           99999 |         -1 |
+         g |      Identifier |        int |            |          6 |           99999 |         -1 |
+         h |      Identifier |        int |            |          6 |           99999 |         -1 |
+         c |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         b |      Identifier |            |            |          0 |            9999 |         -1 |
+         d |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         b |      Identifier |            |            |          0 |            9999 |         -1 |
+         e |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         b |      Identifier |            |            |          0 |            9999 |         -1 |
+         f |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         b |      Identifier |            |            |          0 |            9999 |         -1 |
+         g |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         b |      Identifier |            |            |          0 |            9999 |         -1 |
+         h |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         b |      Identifier |            |            |          0 |            9999 |         -1 |
+         h |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         b |      Identifier |            |            |          0 |            9999 |         -1 |
+         h |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         b |      Identifier |            |            |          0 |            9999 |         -1 |
+         b |      Identifier |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          6 |            9999 |         -1 |
+      main |        Function |       void |            |          5 |            9999 |         -1 |
+      void |         Keyword |            |            |          5 |            9999 |         -1 |
+
+
+                              CONSTANT TABLE
+                               --------------
+      NAME |            TYPE
+---------------------------------------------------------------------------------
+
+
+===================================  Running TestCase   ===================================
+Status: Parsing Complete - Valid
+                              SYMBOL TABLE
+                               ------------
+    SYMBOL |           CLASS |       TYPE |      VALUE |    LINE NO |         NESTING | PARAMS COUNT |
+----------------------------------------------------------------------------------------------------
+         a |      Identifier |        int |          0 |          5 |           99999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         b |      Identifier |        int |          0 |          0 |           99999 |         -1 |
+         b |      Identifier |            |            |          0 |            9999 |         -1 |
+         b |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         b |      Identifier |            |            |          0 |            9999 |         -1 |
+         b |      Identifier |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          3 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+      main |        Function |        int |            |          3 |            9999 |         -1 |
+    printf |        Function |            |            |          8 |            9999 |         -1 |
+    printf |      Identifier |            |            |          0 |            9999 |         -1 |
+    printf |      Identifier |            |            |          0 |            9999 |         -1 |
+     while |         Keyword |            |            |          6 |            9999 |         -1 |
+     while |         Keyword |            |            |          0 |            9999 |         -1 |
+     while |         Keyword |            |            |          0 |            9999 |         -1 |
+
+
+                              CONSTANT TABLE
+                               --------------
+      NAME |            TYPE
+---------------------------------------------------------------------------------
+"Hello world" | String Constant
+      "%d" | String Constant
+         0 | Number Constant
+         4 | Number Constant
+         5 | Number Constant
+
+
+===================================  Running TestCase   ===================================
+Status: Parsing Complete - Valid
+                              SYMBOL TABLE
+                               ------------
+    SYMBOL |           CLASS |       TYPE |      VALUE |    LINE NO |         NESTING | PARAMS COUNT |
+----------------------------------------------------------------------------------------------------
+         a |      Identifier |        int |          2 |          5 |           99999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         b |      Identifier |        int |          4 |          0 |           99999 |         -1 |
+         c |      Identifier |        int |          3 |          0 |           99999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          3 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+      main |        Function |        int |            |          3 |            9999 |         -1 |
+    printf |        Function |            |            |          6 |            9999 |         -1 |
+
+
+                              CONSTANT TABLE
+                               --------------
+      NAME |            TYPE
+---------------------------------------------------------------------------------
+      "%d" | String Constant
+         2 | Number Constant
+         3 | Number Constant
+         4 | Number Constant
+
+
+===================================  Running TestCase   ===================================
+Status: Parsing Complete - Valid
+                              SYMBOL TABLE
+                               ------------
+    SYMBOL |           CLASS |       TYPE |      VALUE |    LINE NO |         NESTING | PARAMS COUNT |
+----------------------------------------------------------------------------------------------------
+         A | Array Identifier |       char | "#define MAX 10" |          6 |           99999 |         -1 |
+         B | Array Identifier |       char |    "Hello" |          7 |           99999 |         -1 |
+  unsigned |         Keyword |            |            |          9 |            9999 |         -1 |
+         a |      Identifier |        int |          1 |          9 |           99999 |         -1 |
+      char |         Keyword |            |            |          6 |            9999 |         -1 |
+      char |         Keyword |            |            |          0 |            9999 |         -1 |
+      char |         Keyword |            |            |          0 |            9999 |         -1 |
+        ch |      Identifier |       char |        'B' |          8 |           99999 |         -1 |
+    return |         Keyword |            |            |         12 |            9999 |         -1 |
+       int |         Keyword |            |            |          4 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+      main |        Function |        int |            |          4 |            9999 |         -1 |
+    printf |        Function |            |            |         10 |            9999 |         -1 |
+
+
+                              CONSTANT TABLE
+                               --------------
+      NAME |            TYPE
+---------------------------------------------------------------------------------
+       'B' | Character Constant
+"#define MAX 10" | String Constant
+   "Hello" | String Constant
+"String = %s Value of Pi = %f" | String Constant
+      3.14 | Floating Constant
+         0 | Number Constant
+         1 | Number Constant
+
+
+===================================  Running TestCase   ===================================
+Wrong array size
+
+
+===================================  Running TestCase   ===================================
+Status: Parsing Complete - Valid
+                              SYMBOL TABLE
+                               ------------
+    SYMBOL |           CLASS |       TYPE |      VALUE |    LINE NO |         NESTING | PARAMS COUNT |
+----------------------------------------------------------------------------------------------------
+         a |      Identifier |        int |         10 |         10 |           99999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+       for |         Keyword |            |            |         11 |            9999 |         -1 |
+        do |         Keyword |            |            |         20 |            9999 |         -1 |
+       int |         Keyword |            |            |          8 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+      main |        Function |        int |            |          8 |            9999 |         -1 |
+    printf |        Function |            |            |         13 |            9999 |         -1 |
+     while |         Keyword |            |            |         16 |            9999 |         -1 |
+     while |         Keyword |            |            |          0 |            9999 |         -1 |
+
+
+                              CONSTANT TABLE
+                               --------------
+      NAME |            TYPE
+---------------------------------------------------------------------------------
+      "H1" | String Constant
+        10 | Number Constant
+         0 | Number Constant
+
+
+===================================  Running TestCase   ===================================
+Status: Parsing Complete - Valid
+                              SYMBOL TABLE
+                               ------------
+    SYMBOL |           CLASS |       TYPE |      VALUE |    LINE NO |         NESTING | PARAMS COUNT |
+----------------------------------------------------------------------------------------------------
+         a |      Identifier |        int |         29 |          6 |           99999 |         -1 |
+         b |      Identifier |        int |            |          6 |           99999 |         -1 |
+         c |      Identifier |       char |            |          7 |           99999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         a |      Identifier |            |            |          0 |            9999 |         -1 |
+         b |      Identifier |            |            |          0 |            9999 |         -1 |
+         x |      Identifier |        int |            |         14 |           99999 |         -1 |
+         x |      Identifier |            |            |          0 |            9999 |         -1 |
+       for |         Keyword |            |            |          8 |            9999 |         -1 |
+      char |         Keyword |            |            |          7 |            9999 |         -1 |
+      char |         Keyword |            |            |          0 |            9999 |         -1 |
+        if |         Keyword |            |            |         10 |            9999 |         -1 |
+       int |         Keyword |            |            |          4 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+      main |        Function |        int |            |          4 |            9999 |         -1 |
+      var1 |      Identifier |        int |            |         18 |           99999 |         -1 |
+      var2 |      Identifier |       char |            |         19 |           99999 |         -1 |
+    printf |        Function |            |            |         11 |            9999 |         -1 |
+    printf |      Identifier |            |            |          0 |            9999 |         -1 |
+
+
+                              CONSTANT TABLE
+                               --------------
+      NAME |            TYPE
+---------------------------------------------------------------------------------
+"Hello World" | String Constant
+      "%d" | String Constant
+        15 | Number Constant
+        29 | Number Constant
+         0 | Number Constant
+
+
+===================================  Running TestCase   ===================================
+[-] ERROR at line 6
+@
+6 syntax error @
+Status: Parsing Failed - Invalid
+
+
+===================================  Running TestCase   ===================================
+[-] ERROR at line 4
+9
+4 syntax error 9
+Status: Parsing Failed - Invalid
+
+
+===================================  Running TestCase   ===================================
+Status: Parsing Complete - Valid
+                              SYMBOL TABLE
+                               ------------
+    SYMBOL |           CLASS |       TYPE |      VALUE |    LINE NO |         NESTING | PARAMS COUNT |
+----------------------------------------------------------------------------------------------------
+         a |      Identifier |        int |            |          2 |           99999 |         -1 |
+         b |      Identifier |        int |            |          2 |           99999 |         -1 |
+         c |      Identifier |        int |            |          2 |           99999 |         -1 |
+         b |      Identifier |            |            |          0 |            9999 |         -1 |
+       num |      Identifier |        int |          0 |         10 |           99999 |         -1 |
+       num |      Identifier |            |            |          0 |            9999 |         -1 |
+       num |      Identifier |            |            |          0 |            9999 |         -1 |
+       num |      Identifier |            |            |          0 |            9999 |         -1 |
+    square |        Function |        int |            |          2 |            9999 |          3 |
+    square |      Identifier |            |            |          0 |            9999 |         -1 |
+    return |         Keyword |            |            |          5 |            9999 |         -1 |
+    return |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          2 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+       int |         Keyword |            |            |          0 |            9999 |         -1 |
+      num2 |      Identifier |        int |            |         11 |           99999 |         -1 |
+      main |        Function |        int |            |          8 |            9999 |         -1 |
+
+
+                              CONSTANT TABLE
+                               --------------
+      NAME |            TYPE
+---------------------------------------------------------------------------------
+         0 | Number Constant
+         2 | Number Constant
+
+
+===================================  Running TestCase   ===================================
+5 Function is void ;
+Status: Parsing Failed - Invalid
+
+
+===================================  Running TestCase   ===================================
+Function not declared
+
+===================================  Running TestCase   ===================================
+6 Function is void ;
+Status: Parsing Failed - Invalid
+
+
+===================================  Running TestCase   ===================================
+12 Number of arguments in function call doesn't match number of parameters )
+Status: Parsing Failed - Invalid
+
+
+===================================  Running TestCase   ===================================
+Type mismatch
+
+
+===================================  Running TestCase   ===================================
+Wrong array size
+
+
+===================================  Running TestCase   ===================================

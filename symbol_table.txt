@@ -1,0 +1,53 @@
+                              SYMBOL TABLE
+                               ------------
+    SYMBOL |            CLASS |       TYPE |      VALUE |    LINE NO |          NESTING |
+----------------------------------------------------------------------------------------------------
+         a | Array Identifier |        int |            |         13 |           99999 |
+         b |       Identifier |       char |            |          1 |           99999 |
+         b | Array Identifier |       char |            |          0 |            9999 |
+         b |       Identifier |       char |            |         14 |           99999 |
+         i |       Identifier |        int |         10 |         10 |           99999 |
+         i |       Identifier |            |            |          0 |            9999 |
+         i |       Identifier |            |            |          0 |            9999 |
+         i |       Identifier |            |            |          0 |            9999 |
+         i |       Identifier |            |            |          0 |            9999 |
+         n |       Identifier |        int |            |         10 |           99999 |
+         x |       Identifier |        int |            |          4 |           99999 |
+         y |       Identifier |        int |            |          3 |           99999 |
+         x |       Identifier |        int |            |          0 |            9999 |
+         y | Array Identifier |        int |            |          0 |            9999 |
+         y |       Identifier |        int |            |         10 |           99999 |
+         x |       Identifier |        int |            |          0 |            9999 |
+         x |       Identifier |        int |          3 |         12 |           99999 |
+         x |       Identifier |        int |            |          0 |            9999 |
+         x |       Identifier |        int |         10 |         19 |           99999 |
+         x |       Identifier |            |            |          0 |            9999 |
+         x |       Identifier |            |            |          0 |            9999 |
+         x |       Identifier |            |            |          0 |            9999 |
+       for |          Keyword |            |            |         15 |            9999 |
+      char |          Keyword |            |            |         11 |            9999 |
+      char |          Keyword |            |            |          0 |            9999 |
+        ch |       Identifier |       char |            |         11 |           99999 |
+    return |          Keyword |            |            |          5 |            9999 |
+        if |          Keyword |            |            |         17 |            9999 |
+       int |          Keyword |            |            |          1 |            9999 |
+       int |          Keyword |            |            |          0 |            9999 |
+       int |          Keyword |            |            |          0 |            9999 |
+       int |          Keyword |            |            |          0 |            9999 |
+       int |          Keyword |            |            |          0 |            9999 |
+       int |          Keyword |            |            |          0 |            9999 |
+       int |          Keyword |            |            |          0 |            9999 |
+       int |          Keyword |            |            |          0 |            9999 |
+     while |          Keyword |            |            |         20 |            9999 |
+      void |          Keyword |            |            |          8 |            9999 |
+
+
+                              CONSTANT TABLE
+                               --------------
+      NAME |             TYPE
+---------------------------------------------------------------------------------
+       199 |  Number Constant
+        10 |  Number Constant
+        20 |  Number Constant
+         0 |  Number Constant
+         3 |  Number Constant

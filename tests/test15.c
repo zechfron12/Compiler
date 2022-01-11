@@ -1,5 +1,3 @@
-#include<stdio.h>
-
 int myfunc(int a)
 {
     return a;
@@ -7,8 +5,7 @@ int myfunc(int a)
 
 void main()
 {
-    int i,n;
+    int i, n;
 
-    myfunc(i,n);
-    
+    myfunc(i, n);
 }

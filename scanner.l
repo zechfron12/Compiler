@@ -98,17 +98,6 @@
 
 	void insertST(char *str1, char *str2)
 	{
-		if(lookupST(str1))
-		{
-			if(strcmp(ST[lookupST(str1)].class,"Identifier")==0 && strcmp(str2,"Array Identifier")==0)
-			{
-				printf("Error use of array\n");
-				exit(0);
-			}	
-			return;
-		}
-		else
-		{
 			int value = hash(str1);
 			if(ST[value].length == 0)
 			{
@@ -137,7 +126,6 @@
 			ST[pos].length = strlen(str1);
 			ST[pos].nestval = 9999;
 			ST[pos].params_count = -1;
-		}
 	}
 
 	void insertSTtype(char *str1, char *str2)
@@ -396,9 +384,9 @@
 		
 	}
 
-	void printST()
+	void printFT()
 	{
-		printf("%10s | %15s | %10s | %10s | %10s | %15s | %10s |\n","SYMBOL", "CLASS", "TYPE","VALUE", "LINE NO", "NESTING", "PARAMS COUNT");
+		printf("%10s | %16s | %10s | %10s | %10s | %16s | %10s |\n","SYMBOL", "CLASS", "TYPE","VALUE", "LINE NO", "NESTING", "PARAMS COUNT");
 		for(int i=0;i<100;i++) {
 			printf("-");
 		}
@@ -409,14 +397,33 @@
 			{
 				continue;
 			}
-			printf("%10s | %15s | %10s | %10s | %10d | %15d | %10d |\n",ST[i].name, ST[i].class, ST[i].type, ST[i].value, ST[i].lineno, ST[i].nestval, ST[i].params_count);
+			if(!strcmp(ST[i].class, "Function"))
+			printf("%10s | %16s | %10s | %10s | %10d | %15d | %10d |\n",ST[i].name, ST[i].class, ST[i].type, ST[i].value, ST[i].lineno, ST[i].nestval, ST[i].params_count);
 		}
-    }
+ }
+
+	void printST()
+	{
+		printf("%10s | %16s | %10s | %10s | %10s | %16s |\n","SYMBOL", "CLASS", "TYPE","VALUE", "LINE NO", "NESTING");
+		for(int i=0;i<100;i++) {
+			printf("-");
+		}
+		printf("\n");
+		for(int i = 0 ; i < 1001 ; i++)
+		{
+			if(ST[i].length == 0)
+			{
+				continue;
+			}
+			if(strcmp(ST[i].class, "Function"))
+			printf("%10s | %16s | %10s | %10s | %10d | %15d |\n",ST[i].name, ST[i].class, ST[i].type, ST[i].value, ST[i].lineno, ST[i].nestval);
+		}
+ }
 
 
 	void printCT()
 	{
-		printf("%10s | %15s\n","NAME", "TYPE");
+		printf("%10s | %16s\n","NAME", "TYPE");
 		for(int i=0;i<81;i++) {
 			printf("-");
 		}
@@ -426,7 +433,7 @@
 			if(CT[i].length == 0)
 				continue;
 
-			printf("%10s | %15s\n",CT[i].name, CT[i].type);
+			printf("%10s | %16s\n",CT[i].name, CT[i].type);
 		}
 	}
 	char curid[20];
@@ -436,11 +443,8 @@
 %}
 
 DE "define"
-IN "include"
-
 %%
 \n 	{yylineno++;}
-([#][" "]*({IN})[ ]*([<]?)([A-Za-z]+)[.]?([A-Za-z]*)([>]?))/["\n"|\/|" "|"\t"]	{ }
 ([#][" "]*({DE})[" "]*([A-Za-z]+)(" ")*[0-9]+)/["\n"|\/|" "|"\t"]				{ } 
 \/\/(.*)																		{ }
 \/\*([^*]|[\r\n]|(\*+([^*/]|[\r\n])))*\*+\/										{ }
@@ -457,6 +461,7 @@ IN "include"
 "."				{ return('.'); }
 
 "char"			{ strcpy(curtype,yytext); insertST(yytext, "Keyword");return CHAR;}
+"PRINT"			{ strcpy(curtype,yytext); insertST(yytext, "Keyword");return PRINT;}
 "double"		{ strcpy(curtype,yytext); insertST(yytext, "Keyword"); return DOUBLE;}
 "else"			{ insertST(yytext, "Keyword"); return ELSE;}
 "float"			{ strcpy(curtype,yytext); insertST(yytext, "Keyword"); return FLOAT;}

@@ -32,17 +32,17 @@
 	char getfirst(char*);
 	extern int params_count;
 	int call_params_count;
-	
+
 %}
 
 %union {
 	int val;
 }
 
-%type <val> initilization_params conditional_statements iterative_statements return_statement expression simple_expression and_expression unary_relation_expression regular_expression sum_expression term factor mutable immutable constant
+%type <val> initilization_params conditional_statements iterative_statements return_statement expression simple_expression and_expression unary_relation_expression regular_expression sum_expression term factor mutable immutable constant print
 
 %nonassoc IF
-%token INT CHAR FLOAT DOUBLE LONG SHORT SIGNED UNSIGNED STRUCT
+%token INT CHAR FLOAT DOUBLE LONG SHORT SIGNED UNSIGNED STRUCT PRINT
 %token RETURN
 %token VOID
 %token WHILE FOR DO 
@@ -94,8 +94,8 @@ variable_declaration_list
 			: variable_declaration_list ',' variable_declaration_identifier | variable_declaration_identifier;
 
 variable_declaration_identifier 
-			: identifier {if(duplicate(curid)){printf("Duplicate\n");exit(0);}insertSTnest(curid,currnest); ins();  } vdi   
-			  | array_identifier {if(duplicate(curid)){printf("Duplicate\n");exit(0);}insertSTnest(curid,currnest); ins();  } vdi;
+			: identifier {if(duplicate(curid)){yyerror("Duplicate\n");}insertSTnest(curid,currnest); ins();  } vdi   
+			  | array_identifier {if(duplicate(curid)){yyerror("Duplicate\n");}insertSTnest(curid,currnest); ins();  } vdi;
 			
 			
 
@@ -106,7 +106,7 @@ identifier_array_type
 			| ;
 
 initilization_params
-			: integer_constant ']' initilization {if($$ < 1) {printf("Wrong array size\n"); exit(0);} }
+			: integer_constant ']' initilization {if($$ < 1) {yyerror("Wrong array size"); } }
 			| ']' string_initilization;
 
 initilization
@@ -181,26 +181,23 @@ expression_statment
 			| ';' ;
 
 conditional_statements 
-			: IF '(' simple_expression ')' {if($3!=1){printf("Condition checking is not of type int\n");exit(0);}} statement conditional_statements_breakup;
+			: IF '(' simple_expression ')' {if($3!=1){yyerror("Condition checking is not of type int\n");}} statement conditional_statements_breakup;
 
 conditional_statements_breakup
 			: ELSE statement
 			| ;
 
 iterative_statements 
-			: WHILE '(' simple_expression ')' {if($3!=1){printf("Condition checking is not of type int\n");exit(0);}} statement 
-			| FOR '(' expression ';' simple_expression ';' {if($5!=1){printf("Condition checking is not of type int\n");exit(0);}} expression ')' 
-			| DO statement WHILE '(' simple_expression ')'{if($5!=1){printf("Condition checking is not of type int\n");exit(0);}} ';';
+			: WHILE '(' simple_expression ')' {if($3!=1){yyerror("Condition checking is not of type int\n");}} statement 
+			| FOR '(' expression ';' simple_expression ';' {if($5!=1){yyerror("Condition checking is not of type int\n");}} expression ')' 
+			| DO statement WHILE '(' simple_expression ')'{if($5!=1){yyerror("Condition checking is not of type int\n");}} ';';
 return_statement 
-			: RETURN ';' {if(strcmp(currfunctype,"void")) {printf("Returning void of a non-void function\n"); exit(0);}}
-			| RETURN expression ';' { 	if(!strcmp(currfunctype, "void"))
-										{ 
-											yyerror("Function is void");
-										}
+			: RETURN ';' {if(strcmp(currfunctype,"void")) {yyerror("Returning void of a non-void function\n"); }}
+			| RETURN expression ';' {
 
 										if((currfunctype[0]=='i' || currfunctype[0]=='c') && $2!=1)
 										{
-											printf("Expression doesn't match return type of function\n"); exit(0);
+											yyerror("Expression doesn't match return type of function\n"); 
 										}
 			              
 			                     	};
@@ -225,44 +222,50 @@ expression
 			: mutable assignment_operator expression              {
 																	  if($1==1 && $3==1) 
 																	  {
-			                                                          $$=1;
-			                                                          } 
-			                                                          else 
-			                                                          {$$=-1; printf("Type mismatch\n"); exit(0);} 
-			                                                       }
+																				$$=1;
+																				} 
+																				else 
+																				{$$=-1; yyerror("Type mismatch\n"); } 
+																			}
 			| mutable addition_assignment_operator expression     {
 																	  if($1==1 && $3==1) 
-			                                                          $$=1; 
-			                                                          else 
-			                                                          {$$=-1; printf("Type mismatch\n"); exit(0);} 
-			                                                       }
+																				$$=1; 
+																				else 
+																				{$$=-1; yyerror("Type mismatch\n"); } 
+																			}
 			| mutable subtraction_assignment_operator expression  {
 																	  if($1==1 && $3==1) 
-			                                                          $$=1; 
-			                                                          else 
-			                                                          {$$=-1; printf("Type mismatch\n"); exit(0);} 
-			                                                       }
+																				$$=1; 
+																				else 
+																				{$$=-1; yyerror("Type mismatch\n"); } 
+																			}
 			| mutable multiplication_assignment_operator expression {
 																	  if($1==1 && $3==1) 
-			                                                          $$=1; 
-			                                                          else 
-			                                                          {$$=-1; printf("Type mismatch\n"); exit(0);} 
-			                                                       }
+																				$$=1; 
+																				else 
+																				{$$=-1; yyerror("Type mismatch\n"); } 
+																			}
 			| mutable division_assignment_operator expression 		{
 																	  if($1==1 && $3==1) 
-			                                                          $$=1; 
-			                                                          else 
-			                                                          {$$=-1; printf("Type mismatch\n"); exit(0);} 
-			                                                       }
+																				$$=1; 
+																				else 
+																				{$$=-1; yyerror("Type mismatch\n"); } 
+																			}
 			| mutable modulo_assignment_operator expression 		{
 																	  if($1==1 && $3==1) 
-			                                                          $$=1; 
-			                                                          else 
-			                                                          {$$=-1; printf("Type mismatch\n"); exit(0);} 
-			                                                       }
+																				$$=1; 
+																				else 
+																				{$$=-1; yyerror("Type mismatch\n"); } 
+																			}
 			| mutable increment_operator 							{if($1 == 1) $$=1; else $$=-1;}
 			| mutable decrement_operator 							{if($1 == 1) $$=1; else $$=-1;}
-			| simple_expression {if($1 == 1) $$=1; else $$=-1;} ;
+			| simple_expression {if($1 == 1) $$=1; else $$=-1;}
+			| print {if($1 == 1) $$=1; else $$=-1;}
+			;
+
+print
+ 		: PRINT '(' string_constant ',' expression ')' { $$ = 1;}
+			;
 
 
 simple_expression 
@@ -308,17 +311,17 @@ factor
 mutable 
 			: identifier {
 						  if(check_id_is_func(curid))
-						  {printf("Function name used as Identifier\n"); exit(8);}
+						  {yyerror("Function name used as Identifier\n"); exit(8);}
 			              if(!checkscope(curid))
-			              {printf("%s\n",curid);printf("Undeclared\n");exit(0);} 
+			              {printf("%s\n",curid);yyerror("Undeclared\n");} 
 			              if(!checkarray(curid))
-			              {printf("%s\n",curid);printf("Array ID has no subscript\n");exit(0);}
+			              {printf("%s\n",curid);yyerror("Array ID has no subscript\n");}
 			              if(gettype(curid,0)=='i' || gettype(curid,1)== 'c')
 			              $$ = 1;
 			              else
 			              $$ = -1;
 			              }
-			| array_identifier {if(!checkscope(curid)){printf("%s\n",curid);printf("Undeclared\n");exit(0);}} '[' expression ']' 
+			| array_identifier {if(!checkscope(curid)){printf("%s\n",curid);yyerror("Undeclared\n");}} '[' expression ']' 
 			                   {if(gettype(curid,0)=='i' || gettype(curid,1)== 'c')
 			              		$$ = 1;
 			              		else
@@ -333,7 +336,7 @@ immutable
 call
 			: identifier '('{
 			             if(!check_declaration(curid, "Function"))
-			             { printf("Function not declared"); exit(0);} 
+			             { yyerror("Function not declared"); } 
 			             insertSTF(curid); 
 						 strcpy(currfunccall,curid);
 			             } arguments ')' 
@@ -372,6 +375,7 @@ void insertSTtype(char *,char *);
 void insertSTvalue(char *, char *);
 void incertCT(char *, char *);
 void printST();
+void printFT();
 void printCT();
 
 int main(int argc , char **argv)
@@ -382,6 +386,8 @@ int main(int argc , char **argv)
 	if(flag == 0)
 	{
 		printf("Status: Parsing Complete - Valid" "\n");
+
+		freopen("symbol_table.txt","w",stdout);
 		printf("%30s" "SYMBOL TABLE" "\n", " ");
 		printf("%30s %s\n", " ", "------------");
 		printST();
@@ -389,12 +395,16 @@ int main(int argc , char **argv)
 		printf("\n\n%30s"  "CONSTANT TABLE" "\n", " ");
 		printf("%30s %s\n", " ", "--------------");
 		printCT();
+freopen("symbol_table_functions.txt","w",stdout);
+			printf("\n\n%30s"  "FUNCTUION TABLE" "\n", " ");
+		printf("%30s %s\n", " ", "--------------");
+		printFT();
 	}
 }
 
 void yyerror(char *s)
 {
-	printf("%d %s %s\n", yylineno, s, yytext);
+	printf("LINE : %d\n ERROR: %s \n", yylineno, s);
 	flag=1;
 	printf( "Status: Parsing Failed - Invalid\n");
 	exit(7);
@@ -413,30 +423,4 @@ void insV()
 int yywrap()
 {
 	return 1;
-}
-
-struct node* mknode(struct node *left, struct node *right, char *token) {	
-	struct node *newnode = (struct node *)malloc(sizeof(struct node));
-	char *newstr = (char *)malloc(strlen(token)+1);
-	strcpy(newstr, token);
-	newnode->left = left;
-	newnode->right = right;
-	newnode->token = newstr;
-	return(newnode);
-}
-
-void print_tree(struct node* tree) {
-	printf("\n\nInorder traversal of the Parse Tree is: \n\n");
-	print_inorder(tree);
-}
-
-void print_inorder(struct node *tree) {
-	int i;
-	if (tree->left) {
-		print_inorder(tree->left);
-	}
-	printf("%s, ", tree->token);
-	if (tree->right) {
-		print_inorder(tree->right);
-	}
 }

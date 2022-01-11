@@ -1,6 +1,4 @@
 
-#include<stdio.h>
-
 void myfunc(int a)
 {
     return a;
@@ -8,8 +6,7 @@ void myfunc(int a)
 
 void main()
 {
-    int i,n;
+    int i, n;
 
     myfunc(i);
-    
 }

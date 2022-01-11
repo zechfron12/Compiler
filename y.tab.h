@@ -55,41 +55,42 @@ extern int yydebug;
     SIGNED = 265,
     UNSIGNED = 266,
     STRUCT = 267,
-    RETURN = 268,
-    VOID = 269,
-    WHILE = 270,
-    FOR = 271,
-    DO = 272,
-    BREAK = 273,
-    identifier = 274,
-    array_identifier = 275,
-    integer_constant = 276,
-    string_constant = 277,
-    float_constant = 278,
-    character_constant = 279,
-    ELSE = 280,
-    modulo_assignment_operator = 281,
-    multiplication_assignment_operator = 282,
-    division_assignment_operator = 283,
-    addition_assignment_operator = 284,
-    subtraction_assignment_operator = 285,
-    assignment_operator = 286,
-    OR_operator = 287,
-    AND_operator = 288,
-    equality_operator = 289,
-    inequality_operator = 290,
-    lessthan_assignment_operator = 291,
-    lessthan_operator = 292,
-    greaterthan_assignment_operator = 293,
-    greaterthan_operator = 294,
-    add_operator = 295,
-    subtract_operator = 296,
-    multiplication_operator = 297,
-    division_operator = 298,
-    modulo_operator = 299,
-    exclamation_operator = 300,
-    increment_operator = 301,
-    decrement_operator = 302
+    PRINT = 268,
+    RETURN = 269,
+    VOID = 270,
+    WHILE = 271,
+    FOR = 272,
+    DO = 273,
+    BREAK = 274,
+    identifier = 275,
+    array_identifier = 276,
+    integer_constant = 277,
+    string_constant = 278,
+    float_constant = 279,
+    character_constant = 280,
+    ELSE = 281,
+    modulo_assignment_operator = 282,
+    multiplication_assignment_operator = 283,
+    division_assignment_operator = 284,
+    addition_assignment_operator = 285,
+    subtraction_assignment_operator = 286,
+    assignment_operator = 287,
+    OR_operator = 288,
+    AND_operator = 289,
+    equality_operator = 290,
+    inequality_operator = 291,
+    lessthan_assignment_operator = 292,
+    lessthan_operator = 293,
+    greaterthan_assignment_operator = 294,
+    greaterthan_operator = 295,
+    add_operator = 296,
+    subtract_operator = 297,
+    multiplication_operator = 298,
+    division_operator = 299,
+    modulo_operator = 300,
+    exclamation_operator = 301,
+    increment_operator = 302,
+    decrement_operator = 303
   };
 #endif
 /* Tokens.  */
@@ -103,41 +104,42 @@ extern int yydebug;
 #define SIGNED 265
 #define UNSIGNED 266
 #define STRUCT 267
-#define RETURN 268
-#define VOID 269
-#define WHILE 270
-#define FOR 271
-#define DO 272
-#define BREAK 273
-#define identifier 274
-#define array_identifier 275
-#define integer_constant 276
-#define string_constant 277
-#define float_constant 278
-#define character_constant 279
-#define ELSE 280
-#define modulo_assignment_operator 281
-#define multiplication_assignment_operator 282
-#define division_assignment_operator 283
-#define addition_assignment_operator 284
-#define subtraction_assignment_operator 285
-#define assignment_operator 286
-#define OR_operator 287
-#define AND_operator 288
-#define equality_operator 289
-#define inequality_operator 290
-#define lessthan_assignment_operator 291
-#define lessthan_operator 292
-#define greaterthan_assignment_operator 293
-#define greaterthan_operator 294
-#define add_operator 295
-#define subtract_operator 296
-#define multiplication_operator 297
-#define division_operator 298
-#define modulo_operator 299
-#define exclamation_operator 300
-#define increment_operator 301
-#define decrement_operator 302
+#define PRINT 268
+#define RETURN 269
+#define VOID 270
+#define WHILE 271
+#define FOR 272
+#define DO 273
+#define BREAK 274
+#define identifier 275
+#define array_identifier 276
+#define integer_constant 277
+#define string_constant 278
+#define float_constant 279
+#define character_constant 280
+#define ELSE 281
+#define modulo_assignment_operator 282
+#define multiplication_assignment_operator 283
+#define division_assignment_operator 284
+#define addition_assignment_operator 285
+#define subtraction_assignment_operator 286
+#define assignment_operator 287
+#define OR_operator 288
+#define AND_operator 289
+#define equality_operator 290
+#define inequality_operator 291
+#define lessthan_assignment_operator 292
+#define lessthan_operator 293
+#define greaterthan_assignment_operator 294
+#define greaterthan_operator 295
+#define add_operator 296
+#define subtract_operator 297
+#define multiplication_operator 298
+#define division_operator 299
+#define modulo_operator 300
+#define exclamation_operator 301
+#define increment_operator 302
+#define decrement_operator 303
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
@@ -148,7 +150,7 @@ union YYSTYPE
 
 	int val;
 
-#line 152 "y.tab.h" /* yacc.c:1909  */
+#line 154 "y.tab.h" /* yacc.c:1909  */
 };
 
 typedef union YYSTYPE YYSTYPE;

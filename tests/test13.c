@@ -1,9 +1,6 @@
-#include<stdio.h>
-
 void main()
 {
-    int i,n;
+    int i, n;
 
     myfunc(i);
-    
 }

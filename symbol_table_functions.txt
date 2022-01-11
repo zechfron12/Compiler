@@ -1,0 +1,8 @@
+
+
+                              FUNCTUION TABLE
+                               --------------
+    SYMBOL |            CLASS |       TYPE |      VALUE |    LINE NO |          NESTING | PARAMS COUNT |
+----------------------------------------------------------------------------------------------------
+      main |         Function |       void |            |          8 |            9999 |         -1 |
+    myfunc |         Function |        int |            |          1 |            9999 |          1 |

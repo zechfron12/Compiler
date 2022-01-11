@@ -1,7 +1,3 @@
-#include <stdio.h>
-
-int y;
-
 int myfunc(int b)
 {
     int y;
@@ -11,11 +7,11 @@ int myfunc(int b)
 
 void main()
 {
-    int n, i;
+    int n, i, y[20];
     char ch; // Character Datatype
     int x;
-    y = 2;
     int a[10];
+    char b[199];
     for (i = 0; i < 10; i++)
     {
         if (i < 10)
